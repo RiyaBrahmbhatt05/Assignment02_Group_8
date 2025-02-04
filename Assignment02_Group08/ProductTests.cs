@@ -145,6 +145,148 @@ namespace Assignment02_Group08
             // Assert
             Assert.That(itemPrice, Is.EqualTo(8000.00m), "Item price should accept the maximum value of $8,000.");
         }
+        //4. Stock Amount Validation  
+        //   - Ensures the stock amount is within the valid range (8 to 800,000).  
+        //   - Validates that the minimum (8) stock values are accepted.
+        //   - Validates that the maximum (800,000) stock values are accepted.  
 
+        //5. Stock Modification Tests :
+        //     IncreaseStock :
+        //   - Verifies that stock increases correctly when adding stock.  
+        //   - Ensures stock can be increased up to the maximum allowed limit (800,000).  
+        //   - Ensures an exception is thrown if stock exceeds the maximum limit.
+        //     DecreaseStock:
+        //   - Verifies that stock decreases correctly when removing stock.  
+        //   - Ensures an exception is thrown when attempting to decrease stock with a negative value.  
+        //   - Ensures an exception is thrown if stock is reduced below the minimum allowed limit (8).  
+
+        [Test]
+        public void StockAmount_500_500()
+        {
+            // Arrange
+            var product = new Product(100, "Drone", 1200.00m, 500);
+
+            // Act
+            int stockAmount = product.StockAmount;
+
+            // Assert
+            Assert.That(stockAmount, Is.InRange(8, 800000), "Stock amount should be between 8 and 800,000.");
+        }
+
+        [Test]
+        public void StockAmount_8_8()
+        {
+            // Arrange
+            var product = new Product(100, "Drone", 1200.00m, 8);
+
+            // Act
+            int stockAmount = product.StockAmount;
+
+            // Assert
+            Assert.That(stockAmount, Is.EqualTo(8), "Stock amount should accept the minimum value of 8.");
+        }
+
+        [Test]
+        public void StockAmount_800000_800000()
+        {
+            //Arrange
+            var product = new Product(100, "Drone", 1200.00m, 800000);
+
+            //Act
+            int stockAmount = product.StockAmount;
+
+            //Assert
+            Assert.That(stockAmount, Is.EqualTo(800000), "Stock amount should accept the maximum value of 800,000.");
+
+        }
+
+        [Test]
+        public void IncreaseStock_50_60()
+        {
+            // Arrange
+            var product = new Product(100, "Drone", 1200.00m, 50);
+
+            // Act
+            product.IncreaseStock(10);
+            int updatedStock = product.StockAmount;
+
+            // Assert
+            Assert.That(updatedStock, Is.EqualTo(60), "Stock amount should increase by 10.");
+        }
+
+        [Test]
+        public void IncreaseStock_799990_800000()
+        {
+            // Arrange
+            var product = new Product(100, "Drone", 1200.00m, 799990);
+
+            // Act
+            product.IncreaseStock(10);
+            int updatedStock = product.StockAmount;
+
+            // Assert
+            Assert.That(updatedStock, Is.EqualTo(800000), "Stock amount should increase to the maximum limit of 800,000.");
+        }
+
+        [Test]
+        public void IncreaseStock_800000_Exception()
+        {
+            // Arrange
+            var product = new Product(100, "Drone", 1200.00m, 800000);
+
+            // Act
+            var ex = Assert.Throws<InvalidOperationException>(() => product.IncreaseStock(10));
+
+            // Assert
+            Assert.That(ex.Message, Is.EqualTo("Stock amount cannot exceed the maximum limit of 800,000."));
+        }
+
+        [Test]
+        public void DecreaseStock_50_60()
+        {
+            // Arrange
+            var product = new Product(100, "Drone", 1200.00m, 50);
+
+            // Act
+            product.DecreaseStock(10);
+            int updatedStock = product.StockAmount;
+
+            // Assert
+            Assert.That(updatedStock, Is.EqualTo(40), "Stock amount should decrease by 10.");
+        }
+
+        [Test]
+        public void DecreaseStock_NegativeValue_Exception()
+        {
+            // Arrange
+            var product = new Product(100, "Drone", 1200.00m, 50);
+
+            // Act
+            var ex = Assert.Throws<ArgumentOutOfRangeException>(() =>
+            {
+                product.DecreaseStock(-10);
+            });
+
+            // Assert
+            Assert.That(ex.Message, Does.Contain("Amount to decrease stock cannot be negative."));
+        }
+
+        [Test]
+        public void DecreaseStock_8_Exception()
+        {
+            // Arrange
+            var product = new Product(100, "Drone", 1200.00m, 8);
+
+            // Act
+            var ex = Assert.Throws<InvalidOperationException>(() =>
+            {
+                product.DecreaseStock(1);
+            });
+
+            // Assert
+            Assert.That(ex.Message, Is.EqualTo("Stock amount cannot exceed the minimum limit of 8."));
+        }
     }
+
 }
+
