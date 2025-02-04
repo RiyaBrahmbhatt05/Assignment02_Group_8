@@ -3,11 +3,15 @@
   "WorkspaceRootPath": "C:\\Users\\Riya\\Desktop\\Assignment02_Group_8\\Assignment02_Group08\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1115C172-CF80-4FD7-9939-1A15C7CF83B3}|Assignment02_Group08.csproj|c:\\users\\riya\\desktop\\assignment02_group_8\\assignment02_group08\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1115C172-CF80-4FD7-9939-1A15C7CF83B3}|Assignment02_Group08.csproj|c:\\users\\riya\\desktop\\assignment02_group_8\\assignment02_group08\\producttests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1115C172-CF80-4FD7-9939-1A15C7CF83B3}|Assignment02_Group08.csproj|solutionrelative:producttests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1115C172-CF80-4FD7-9939-1A15C7CF83B3}|Assignment02_Group08.csproj|C:\\Users\\Riya\\Desktop\\Assignment02_Group_8\\Assignment02_Group08\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1115C172-CF80-4FD7-9939-1A15C7CF83B3}|Assignment02_Group08.csproj|solutionrelative:product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1115C172-CF80-4FD7-9939-1A15C7CF83B3}|Assignment02_Group08.csproj|c:\\users\\riya\\desktop\\assignment02_group_8\\assignment02_group08\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1115C172-CF80-4FD7-9939-1A15C7CF83B3}|Assignment02_Group08.csproj|C:\\Users\\Riya\\Desktop\\Assignment02_Group_8\\Assignment02_Group08\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1115C172-CF80-4FD7-9939-1A15C7CF83B3}|Assignment02_Group08.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -43,19 +47,31 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Product.cs",
-              "DocumentMoniker": "C:\\Users\\Riya\\Desktop\\Assignment02_Group_8\\Assignment02_Group08\\Product.cs",
-              "RelativeDocumentMoniker": "Product.cs",
-              "ToolTip": "C:\\Users\\Riya\\Desktop\\Assignment02_Group_8\\Assignment02_Group08\\Product.cs",
-              "RelativeToolTip": "Product.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAKAAAAAAAAAA==",
+              "Title": "ProductTests.cs",
+              "DocumentMoniker": "C:\\Users\\Riya\\Desktop\\Assignment02_Group_8\\Assignment02_Group08\\ProductTests.cs",
+              "RelativeDocumentMoniker": "ProductTests.cs",
+              "ToolTip": "C:\\Users\\Riya\\Desktop\\Assignment02_Group_8\\Assignment02_Group08\\ProductTests.cs",
+              "RelativeToolTip": "ProductTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-04T02:19:03.289Z",
+              "WhenOpened": "2025-02-04T02:21:37.38Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\Riya\\Desktop\\Assignment02_Group_8\\Assignment02_Group08\\Product.cs",
+              "RelativeDocumentMoniker": "Product.cs",
+              "ToolTip": "C:\\Users\\Riya\\Desktop\\Assignment02_Group_8\\Assignment02_Group08\\Product.cs",
+              "RelativeToolTip": "Product.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-04T02:19:03.289Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Riya\\Desktop\\Assignment02_Group_8\\Assignment02_Group08\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -63,8 +79,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-04T02:18:47.507Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-04T02:18:47.507Z"
             }
           ]
         }
